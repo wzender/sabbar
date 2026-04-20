@@ -1,0 +1,21 @@
+{
+  "name": "sabbar",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace server & npm run dev --workspace client",
+    "dev:client": "npm run dev --workspace client",
+    "dev:server": "npm run dev --workspace server",
+    "build": "npm run build --workspace server && npm run build --workspace client",
+    "migrate": "npm run migrate --workspace server",
+    "seed": "npm run seed --workspace server",
+    "start:local": "./start.sh",
+    "start:local:seed": "./start.sh --seed",
+    "start:local:fast": "./start.sh --fast",
+    "start:local:fast:seed": "./start.sh --fast --seed"
+  }
+}
