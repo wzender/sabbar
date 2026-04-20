@@ -5,7 +5,9 @@ dotenv.config();
 
 const databaseUrl = process.env.DATABASE_URL;
 if (!databaseUrl) {
-  throw new Error("DATABASE_URL is required");
+  throw new Error(
+    "DATABASE_URL is required. In Render, set it from the sabbar-db Postgres connection string or add it manually in the web service environment.",
+  );
 }
 
 export const pool = new Pool({
