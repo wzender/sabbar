@@ -12,8 +12,12 @@ services:
         fromDatabase:
           name: sabbar-db
           property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
       - key: CLIENT_ORIGIN
         value: https://sabbar-client.onrender.com
+      - key: TEACHER_EMAIL
+        value: teacher@example.com
 
   - type: web
     name: sabbar-client
